@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/main_radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/game_tab_background"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_button_recommend"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/game_tab_recommended_normal"
+                android:tag="radio_button_recommend"
+                android:button="@null"
+                android:text="@string/tab_recommend" />
+
+            <RadioButton
+                android:id="@+id/radio_button_rank"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/game_tab_top_normal"
+                android:tag="radio_button_rank"
+                android:button="@null"
+                android:text="@string/tab_rank" />
+
+            <RadioButton
+                android:id="@+id/radio_button_category"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/game_tab_category_normal"
+                android:tag="radio_button_category"
+                android:button="@null"
+                android:text="@string/tab_category" />
+
+            <RadioButton
+                android:id="@+id/radio_button_mine"
+                style="@style/main_tab_bottom"
+                android:drawableTop="@drawable/game_tab_downloads_normal"
+                android:tag="radio_button_mine"
+                android:button="@null"
+                android:text="我" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</TabHost>
